@@ -9,7 +9,7 @@ import { Product } from '../common/Product';
 })
 export class ProductService {
 
-private baseUrl = 'http://localhost:8080/api/v1';
+private baseUrl = 'Productservice-env.eba-2byedi8h.ap-southeast-1.elasticbeanstalk.com/api/v1';
 
 
   constructor(private httpClient: HttpClient) {}
