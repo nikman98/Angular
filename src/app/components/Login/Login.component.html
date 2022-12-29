@@ -1,0 +1,111 @@
+<div class="modal-body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 m-auto">
+        <form class="form-container">
+          <div class="card mt-2 bg-white">
+            <div class="card-title text-center mt-3">
+              <img
+                src="../../../assets/images/AvtarNew.png"
+                height="140px"
+                width="140px"
+                class="img-rounded"
+              />
+            </div>
+            <div class="card-body">
+              <form (ngSubmit)="checkLogin()" [formGroup]="form">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-user fa-1x"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="email"
+                    class="form-control py-2"
+                    id="exampleInputEmail1"
+                    placeholder="example@example.com"
+                    [(ngModel)]="username"
+                    required
+                    formControlName="username"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-key fa-1x"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="password"
+                    class="form-control py-2"
+                    id="exampleInputPassword"
+                    placeholder="Password"
+                    [(ngModel)]="password"
+                    required
+                    formControlName="password"
+                  />
+                </div>
+
+                <button
+                  [disabled]="!form.valid"
+                  type="submit"
+                  class="btn btn-block"
+                  style="background-color: #065a3b; color: #fff"
+                >
+                  Log in</button
+                ><br />
+
+                <p class="float-right mt-2">
+                  New User ?<a routerLink="/register" style="color: #086349">
+                    Create Account</a
+                  >
+                </p>
+                <br />
+              </form>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+
+<mat-toolbar>
+  <span>LOGIN</span>
+</mat-toolbar>
+
+<div class="bg-color">
+  <div class="container">
+<div class="main-div">
+<mat-card class="my-card">
+   <mat-card-content>
+      <form class="my-form">
+         <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input  matInput  placeholder="Email" [formControl]="mailid" name="txtname" required>
+         </mat-form-field>
+        <br>
+         <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input  matInput  placeholder="Password" [formControl]="password" name="txtpass" required>
+         </mat-form-field>
+      </form>
+   </mat-card-content>
+   <div class = "bottom-pre">
+   <mat-card-actions>
+    
+      <button mat-raised-button (click)="loginData()" color="primary">LOGIN</button>
+   
+     <button mat-raised-button (click)="RegisterData()" color="primary">REGISTER</button>
+    
+  </mat-card-actions>
+</div>
+
+</mat-card> -->
+
+<!-- </div>
+</div>
+</div> -->
