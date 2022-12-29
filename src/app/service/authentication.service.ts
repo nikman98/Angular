@@ -18,7 +18,7 @@ export class AuthenticationService {
 
   authenticate(username, password) {
     return this.httpClient
-      .post<any>('http://localhost:8001/authenticate', { username, password })
+      .post<any>('Securityservice-env.eba-4dgi4gz2.ap-southeast-1.elasticbeanstalk.com/authenticate', { username, password })
       .pipe(
         map((userData) => {
           sessionStorage.setItem('username', username);
